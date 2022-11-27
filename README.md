@@ -11,7 +11,8 @@
 - [Пример запуска теста в Selenoid](#-пример-запуска-теста-в-selenoid)
 
 
-## Технологии и инструменты
+
+## :rocket: Технологии и инструменты:
 
 <p  align="center">
 
@@ -28,24 +29,28 @@
 </p>
 
 
-## Реализованные проверки:
+
+## :heavy_check_mark: Реализованные проверки:
 ### UI Tests
 
 - Проверка отображения главной страницы 
 - Проверка результатов поиска работы 
-- Проверка отображаения приложений для скачивания 
+- Проверка отображения приложений для скачивания 
 - Проверка отображения формы 'Регистрация соискателя'
 
 
-## Запуск тестов из терминала
 
-### Локальный запуск тестов
+## :computer: Запуск тестов из терминала: 
+
+
+### Локальный запуск тестов:
 
 ```bash
 gradle clean test
 ```
 
-### Удаленный запуск тестов
+
+### Удаленный запуск тестов:
 
 ```bash
 gradle clean test
@@ -55,7 +60,8 @@ gradle clean test
 -DremoteUrl=${remoteUrl}
 ```
 
-## Параметры сборки
+
+## Параметры сборки:
 
  <strong>*browser*</strong> – браузер, в котором будут выполняться тесты (_по умолчанию - <strong>*chrome*</strong>_).
 
@@ -66,7 +72,8 @@ gradle clean test
  <strong>*remoteUrl*</strong> – логин, пароль и адрес удаленного сервера Selenoid (_по умолчанию указаны в сборке Jenkins_).
 
 
-## Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/hw_project_15/)
+
+## <img width="4%" title="Jenkins" src="images/Jenkins_logo.svg"> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/hw_project_15/):
 
 Для запуска сборки необходимо указать значения параметров и нажать кнопку <code><strong>*Собрать*</strong></code>.
 
@@ -82,23 +89,26 @@ gradle clean test
 </p>
 
 
-## Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/hw_project_15/2/allure/)
+
+## <img width="4%" title="Allure Report" src="images/Allure.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/hw_project_15/2/allure/):
 
 <p align="center">
   <img src="images/allure1.png" alt="allure1" width="900">
 </p>
 
-## Уведомления в Telegram с использованием бота
+
+## <img width="4%" title="Telegram" src="images/Telegram.svg"> Уведомления в Telegram с использованием бота:
 После завершения сборки специальный бот, созданный в <strong>Telegram</strong>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.
 
 <p align="center">
-<img title="Telegram Notification" src="images/tl.jpg">
+<img src="images/tl.jpg" alt="400" width="400">
 </p>
 
-## Пример запуска теста в Selenoid
+
+## <img width="4%" title="Selenoid" src="images/Selenoid.svg"> Пример запуска теста в Selenoid:
 
 К каждому тесту в отчете прилагается видео.
 
 <p align="center">
-  <img title="Selenoid Video" src="images/video.mp4">
+  <img title="Selenoid Video" src="images/video.gif">
 </p>
