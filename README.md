@@ -101,7 +101,7 @@ gradle clean test
 После завершения сборки специальный бот, созданный в <strong>Telegram</strong>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.
 
 <p align="center">
-<img title="Telegram Notification" src="images/tl.jpg">
+<img src="tl.png" alt="100" width="900">
 </p>
 
 
