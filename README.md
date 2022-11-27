@@ -12,7 +12,7 @@
 
 
 
-## :technologist: Технологии и инструменты:
+## :rocket: Технологии и инструменты:
 
 <p  align="center">
 
@@ -30,7 +30,7 @@
 
 
 
-## :bookmark_tabs: Реализованные проверки:
+## :heavy_check_mark: Реализованные проверки:
 ### UI Tests
 
 - Проверка отображения главной страницы 
@@ -97,7 +97,7 @@ gradle clean test
 </p>
 
 
-## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Уведомления в Telegram с использованием бота:
+## <img width="4%" title="Telegram" src="images/Telegram.svg"> Уведомления в Telegram с использованием бота:
 После завершения сборки специальный бот, созданный в <strong>Telegram</strong>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.
 
 <p align="center">
@@ -105,7 +105,7 @@ gradle clean test
 </p>
 
 
-## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid:
+## <img width="4%" title="Selenoid" src="images/Selenoid.svg"> Пример запуска теста в Selenoid:
 
 К каждому тесту в отчете прилагается видео.
 
