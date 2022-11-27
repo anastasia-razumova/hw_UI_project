@@ -12,7 +12,7 @@
 
 
 
-## Технологии и инструменты:
+## :technologist: Технологии и инструменты:
 
 <p  align="center">
 
@@ -30,7 +30,7 @@
 
 
 
-## Реализованные проверки:
+## :bookmark_tabs: Реализованные проверки:
 ### UI Tests
 
 - Проверка отображения главной страницы 
@@ -40,7 +40,7 @@
 
 
 
-## Запуск тестов из терминала:
+## :computer: Запуск тестов из терминала: 
 
 
 ### Локальный запуск тестов:
@@ -73,7 +73,7 @@ gradle clean test
 
 
 
-## Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/hw_project_15/):
+## <img width="4%" title="Jenkins" src="images/Jenkins_logo.svg"> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/hw_project_15/):
 
 Для запуска сборки необходимо указать значения параметров и нажать кнопку <code><strong>*Собрать*</strong></code>.
 
@@ -90,14 +90,14 @@ gradle clean test
 
 
 
-## Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/hw_project_15/2/allure/):
+## <img width="4%" title="Allure Report" src="images/Allure.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/hw_project_15/2/allure/):
 
 <p align="center">
   <img src="images/allure1.png" alt="allure1" width="900">
 </p>
 
 
-## Уведомления в Telegram с использованием бота:
+## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Уведомления в Telegram с использованием бота:
 После завершения сборки специальный бот, созданный в <strong>Telegram</strong>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.
 
 <p align="center">
@@ -105,7 +105,7 @@ gradle clean test
 </p>
 
 
-## Пример запуска теста в Selenoid:
+## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid:
 
 К каждому тесту в отчете прилагается видео.
 
