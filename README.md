@@ -94,7 +94,7 @@ gradle clean test
 ## <img width="4%" title="Allure Report" src="images/Allure.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/hw_project_15/2/allure/):
 
 <p align="center">
-  <img src="images/allure1.png" alt="allure1" width="900">
+  <img src="images/jnk.png" alt="jnk" width="900">
 </p>
 
 
@@ -102,7 +102,7 @@ gradle clean test
 После завершения сборки специальный бот, созданный в <strong>Telegram</strong>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.
 
 <p align="center">
-<img src="images/tl.jpg" alt="400" width="400">
+<img src="images/tlg.jpg" alt="400" width="400">
 </p>
 
 
