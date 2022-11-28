@@ -43,7 +43,7 @@ public class MainPageTests extends TestBase {
 
     @Test
     @DisplayName("Проверка отображения приложений для скачивания")
-    void servicesShouldBeVisibleTest() {
+    void appsShouldBeVisibleTest() {
         step("Открыть 'https://rabota.by/'", () ->
                 open("https://rabota.by/"));
 
@@ -53,8 +53,22 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
+    @DisplayName("Проверка отображения сервисов для соискателей")
+    void servicesShouldBeVisibleTest() {
+        step("Открыть 'https://rabota.by/'", () ->
+                open("https://rabota.by/"));
+
+        step("Проверка отображения кнопки 'Все сервисы'", () ->
+                $(byText("Все сервисы")).click());
+
+        step("Проверка отображения сервисов для соискателей", () ->
+                $(".bloko-header-1").shouldBe(visible));
+
+    }
+
+    @Test
     @DisplayName("Отображения формы 'Регистрация соискателя'")
-    void dashboardShouldBeVisibleTest() {
+    void formShouldBeVisibleTest() {
         step("Открыть 'https://rabota.by/'", () ->
                 open("https://rabota.by/"));
 
