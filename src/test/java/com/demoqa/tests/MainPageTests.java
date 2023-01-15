@@ -1,18 +1,20 @@
 package com.demoqa.tests;
 
 
+import com.demoqa.tests.TestBase;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import com.demoqa.pages.PageObject;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MainPageTests extends TestBase {
+
+    PageObject pageObjects = new PageObject();
+
 
     @Test
     @DisplayName("Проверка наличия главной страницы")
@@ -35,10 +37,11 @@ public class MainPageTests extends TestBase {
                 open("https://rabota.by/"));
 
         step("Ввести текст в поисковую строку", () ->
-                $("#a11y-search-input").setValue("QA").pressEnter());
+                pageObjects.search("QA"));
+
 
         step("Проверить отображение вакансий", () ->
-                $("#a11y-main-content").shouldHave(text("QA")));
+                pageObjects.checkContent("QA"));
     }
 
     @Test
@@ -48,9 +51,10 @@ public class MainPageTests extends TestBase {
                 open("https://rabota.by/"));
 
         step("Проверка отображения приложений для скачивания", () ->
-                $(".supernova-dashboard-footer-app-buttons").shouldBe(visible));
+                pageObjects.visibilityApps());
 
     }
+
 
     @Test
     @DisplayName("Проверка отображения сервисов для соискателей")
@@ -59,12 +63,13 @@ public class MainPageTests extends TestBase {
                 open("https://rabota.by/"));
 
         step("Проверка отображения кнопки 'Все сервисы'", () ->
-                $(byText("Все сервисы")).click());
+                pageObjects.services());
 
         step("Проверка отображения сервисов для соискателей", () ->
-                $(".bloko-header-1").shouldBe(visible));
+                pageObjects.visibilityServices());
 
     }
+
 
     @Test
     @DisplayName("Отображения формы 'Регистрация соискателя'")
@@ -73,13 +78,12 @@ public class MainPageTests extends TestBase {
                 open("https://rabota.by/"));
 
         step("Проверка отображения кнопки 'Создать резюме'", () ->
-            $(byText("Создать резюме")).click());
+                pageObjects.checkCreateResume());
 
         step("Проверка отображения формы 'Регистрация соискателя'", () ->
-                $(".bloko-header-1").shouldHave(text("Регистрация соискателя")));
+                pageObjects.checkRegistrationPage());
 
-        };
-
+    }
 
 
 
