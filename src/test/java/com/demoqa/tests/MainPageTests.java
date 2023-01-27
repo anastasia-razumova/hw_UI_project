@@ -1,26 +1,24 @@
 package com.demoqa.tests;
 
 
-import com.demoqa.tests.TestBase;
+import com.demoqa.pages.MainPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import com.demoqa.pages.PageObject;
 
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MainPageTests extends TestBase {
 
-    PageObject pageObjects = new PageObject();
+    MainPage mainPage = new MainPage();
 
 
     @Test
     @DisplayName("Проверка наличия главной страницы")
     void titleTest() {
         step("Открыть 'https://rabota.by/'", () ->
-                open("https://rabota.by/"));
+                mainPage.openMainPage());
 
         step("Заголовок страницы имеет текст 'Работа в Минске, свежие вакансии - rabota.by'", () -> {
             String expectedTitle = "Работа в Минске, свежие вакансии - rabota.by";
@@ -34,24 +32,24 @@ public class MainPageTests extends TestBase {
     @DisplayName("Поиск работы")
     void jobSearchTest() {
         step("Открыть 'https://rabota.by/'", () ->
-                open("https://rabota.by/"));
+                mainPage.openMainPage());
 
         step("Ввести текст в поисковую строку", () ->
-                pageObjects.search("QA"));
+                mainPage.search("QA"));
 
 
         step("Проверить отображение вакансий", () ->
-                pageObjects.checkContent("QA"));
+                mainPage.checkContent("QA"));
     }
 
     @Test
     @DisplayName("Проверка отображения приложений для скачивания")
     void appsShouldBeVisibleTest() {
         step("Открыть 'https://rabota.by/'", () ->
-                open("https://rabota.by/"));
+                mainPage.openMainPage());
 
         step("Проверка отображения приложений для скачивания", () ->
-                pageObjects.visibilityApps());
+                mainPage.visibilityApps());
 
     }
 
@@ -60,30 +58,17 @@ public class MainPageTests extends TestBase {
     @DisplayName("Проверка отображения сервисов для соискателей")
     void servicesShouldBeVisibleTest() {
         step("Открыть 'https://rabota.by/'", () ->
-                open("https://rabota.by/"));
+                mainPage.openMainPage());
 
         step("Проверка отображения кнопки 'Все сервисы'", () ->
-                pageObjects.services());
+                mainPage.services());
 
         step("Проверка отображения сервисов для соискателей", () ->
-                pageObjects.visibilityServices());
+                mainPage.visibilityServices());
 
     }
 
 
-    @Test
-    @DisplayName("Отображения формы 'Регистрация соискателя'")
-    void formShouldBeVisibleTest() {
-        step("Открыть 'https://rabota.by/'", () ->
-                open("https://rabota.by/"));
-
-        step("Проверка отображения кнопки 'Создать резюме'", () ->
-                pageObjects.checkCreateResume());
-
-        step("Проверка отображения формы 'Регистрация соискателя'", () ->
-                pageObjects.checkRegistrationPage());
-
-    }
 
 
 

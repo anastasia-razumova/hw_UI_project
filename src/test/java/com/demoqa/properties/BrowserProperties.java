@@ -1,6 +1,6 @@
 package com.demoqa.properties;
 
-public class SystemProperties {
+public class BrowserProperties {
     public static String browser() {
         return System.getProperty("browser", "chrome");
     }
